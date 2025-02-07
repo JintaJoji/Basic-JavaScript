@@ -1,0 +1,86 @@
+ <!-- fadeToggle-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery fadeToggle Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .content {
+            width: 300px;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+            margin: 20px auto;
+            display: none;
+        }
+        .toggle-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn">Toggle Content</button>
+    <div class="content">This is a toggled content box.</div>
+    
+    <script>
+        $(document).ready(function() {
+            $(".toggle-btn").click(function() {
+                $(".content").fadeToggle();
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- hover effect -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hover Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 200px;
+            margin: 50px auto;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">Hover over me</div>
+
+    <script>
+        $(document).ready(function() {
+            $(".box").hover(
+                function() {
+                    $(this).css("background-color", "yellow");
+                }, 
+                function() {
+                    $(this).css("background-color", "lightgray");
+                }
+            );
+        });
+    </script>
+
+</body>
+</html> 
